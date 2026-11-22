@@ -1,0 +1,14 @@
+# Data + EDA (versions tested locally with Python 3.10)
+pandas==2.3.3
+numpy==2.2.6
+pyarrow==25.0.1
+matplotlib==3.10.9
+seaborn==0.13.2
+scikit-learn==1.7.2
+nbconvert
+ipykernel
+
+# Each role adds its own dependencies below (pin the version you test with)
+# DE: faker
+# Modeling / Eval: xgboost, lightgbm, imbalanced-learn
+# MLOps: fastapi, uvicorn, streamlit, evidently

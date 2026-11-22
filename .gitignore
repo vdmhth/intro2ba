@@ -1,0 +1,19 @@
+# Data: too large for GitHub; keep only the folder structure
+data/**
+!data/**/
+!data/**/.gitkeep
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Environment / secrets
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
