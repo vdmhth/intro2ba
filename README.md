@@ -33,13 +33,16 @@ intro2ba/
 │   │   └── eda/
 │   │       ├── kaggle/                                 # figures from the analysis of the original Kaggle data
 │   │       │   ├── amount_distribution.png             # amount distribution of fraudulent and legitimate transactions
-│   │       │   ├── fraud_rate_by_amount.png            # fraud rate across amount bins
-│   │       │   ├── recipient_prior_count.png           # earlier transactions received by the recipient
-│   │       │   ├── spearman_correlation.png            # Spearman correlation matrix
-│   │       │   ├── split_cumulative_share.png          # cumulative transactions and fraud by step, with split points
+│   │       │   ├── balance_leakage.png                 # balance patterns that reveal the label
+│   │       │   ├── feature_auc.png                     # single-feature AUC of candidate and excluded features
+│   │       │   ├── feature_correlation.png             # Spearman correlation between candidate features
+│   │       │   ├── fraud_rate_by_amount_and_type.png   # fraud rate by amount decile for TRANSFER and CASH_OUT
+│   │       │   ├── fraud_rate_by_recipient_history.png # fraud rate by number of earlier transactions to the recipient
+│   │       │   ├── fraud_value_concentration.png       # cumulative share of fraud value by case
+│   │       │   ├── split_cumulative_share.png          # cumulative transactions and frauds by step, with split points
 │   │       │   ├── type_volume_fraud_rate.png          # volume and fraud rate by transaction type
-│   │       │   ├── volume_fraud_by_hour.png            # volume and fraud rate by hour of day
-│   │       │   └── volume_fraud_by_step.png            # volume, fraud count and fraud rate by step
+│   │       │   ├── volume_fraud_by_day.png             # legitimate volume, frauds and fraud rate by day
+│   │       │   └── volume_fraud_by_hour.png            # legitimate volume, frauds and fraud rate by hour of day
 │   │       └── merged/                                 # figures from the analysis of the data after synthetic generation
 │   ├── final/                                          # final report (PDF) and presentation slides (PPTX)
 │   └── monitoring/                                     # Evidently monitoring reports
