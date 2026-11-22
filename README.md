@@ -33,7 +33,7 @@ intro2ba/
 │   │   └── eda/
 │   │       ├── kaggle/                                 # figures from the analysis of the original Kaggle data
 │   │       │   ├── amount_distribution.png             # amount distribution of fraudulent and legitimate transactions
-│   │       │   ├── balance_leakage.png                 # balance patterns that reveal the label
+│   │       │   ├── balance_patterns.png                # balance patterns before and after the transaction
 │   │       │   ├── feature_auc.png                     # single-feature AUC of candidate and excluded features
 │   │       │   ├── feature_correlation.png             # Spearman correlation between candidate features
 │   │       │   ├── fraud_rate_by_amount_and_type.png   # fraud rate by amount decile for TRANSFER and CASH_OUT
