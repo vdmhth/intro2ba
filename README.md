@@ -6,42 +6,58 @@ Group project for the Business Analytics course. The project develops a classifi
 
 ```
 intro2ba/
-├── docs/
-│   ├── guideline/                 # course guideline
-│   ├── report/                    # report sections prepared by each member
-│   ├── data_dictionary.md         # synthetic fields: name, type, unit, valid range, generation logic
-│   └── feature_spec_da.md         # features proposed from the exploratory analysis
-├── data/                          # not versioned
-│   ├── raw/                       # original Kaggle data and its parquet conversion
-│   ├── interim/                   # synthetic fields, merged data and cleaned data
-│   ├── processed/                 # training, validation and test sets
-│   └── stream/                    # stream period used for replay, including drift scenarios
-├── notebooks/
-│   ├── data_generation/           # development and checks of the data generator
-│   ├── eda/                       # exploratory analysis of the Kaggle data and of the merged data
-│   ├── cleaning/                  # data cleaning with before and after comparisons
-│   ├── features/                  # feature construction and selection
-│   ├── modeling_evaluation/       # training, class imbalance handling, threshold selection, evaluation
-│   └── monitoring/                # drift and performance analysis
-├── src/fraud/
-│   ├── data/                      # data generation, cleaning and splitting
-│   ├── features/                  # feature functions based on past transactions only
-│   ├── models/                    # shared training function
-│   ├── evaluation/                # metrics, cost functions and threshold selection
-│   └── monitoring/                # drift detection and retraining triggers
 ├── app/
-│   ├── api/                       # FastAPI scoring service
-│   └── dashboard/                 # Streamlit review queue for fraud analysts
-├── models/                        # trained model, decision thresholds and baseline metrics
-├── scripts/                       # command-line scripts, e.g. data generation and stream replay
-├── tests/                         # API consistency test on a reference set and unit tests
+│   ├── api/                                            # FastAPI scoring service
+│   └── dashboard/                                      # Streamlit review queue for fraud analysts
+├── data/                                               # not versioned
+│   ├── interim/                                        # synthetic fields, merged data and cleaned data
+│   ├── processed/                                      # training, validation and test sets
+│   ├── raw/                                            # original Kaggle data and its parquet conversion
+│   └── stream/                                         # stream period used for replay, including drift scenarios
+├── docs/
+│   ├── guideline/
+│   │   └── Ecommerce_Fraud_Detection_Project_Announcement.pdf   # course guideline
+│   ├── report/                                         # report sections prepared by each member
+│   └── feature_spec_da.md                              # features proposed from the exploratory analysis
+├── models/                                             # trained model, decision thresholds and baseline metrics
+├── notebooks/
+│   ├── cleaning/                                       # data cleaning with before and after comparisons
+│   ├── data_generation/                                # development and checks of the data generator
+│   ├── eda/
+│   │   └── eda_kaggle.ipynb                            # exploratory analysis of the original Kaggle data
+│   ├── features/                                       # feature construction and selection
+│   ├── modeling_evaluation/                            # training, class imbalance handling, threshold selection, evaluation
+│   └── monitoring/                                     # drift and performance analysis
 ├── reports/
-│   ├── figures/eda/kaggle/        # figures from the analysis of the original Kaggle data
-│   ├── figures/eda/merged/        # figures from the analysis of the data after synthetic generation
-│   ├── monitoring/                # Evidently monitoring reports
-│   └── final/                     # final report (PDF) and presentation slides (PPTX)
-└── requirements.txt               # Python dependencies
+│   ├── figures/
+│   │   └── eda/
+│   │       ├── kaggle/                                 # figures from the analysis of the original Kaggle data
+│   │       │   ├── amount_distribution.png             # amount distribution of fraudulent and legitimate transactions
+│   │       │   ├── fraud_rate_by_amount.png            # fraud rate across amount bins
+│   │       │   ├── recipient_prior_count.png           # earlier transactions received by the recipient
+│   │       │   ├── spearman_correlation.png            # Spearman correlation matrix
+│   │       │   ├── split_cumulative_share.png          # cumulative transactions and fraud by step, with split points
+│   │       │   ├── type_volume_fraud_rate.png          # volume and fraud rate by transaction type
+│   │       │   ├── volume_fraud_by_hour.png            # volume and fraud rate by hour of day
+│   │       │   └── volume_fraud_by_step.png            # volume, fraud count and fraud rate by step
+│   │       └── merged/                                 # figures from the analysis of the data after synthetic generation
+│   ├── final/                                          # final report (PDF) and presentation slides (PPTX)
+│   └── monitoring/                                     # Evidently monitoring reports
+├── scripts/                                            # command-line scripts, e.g. data generation and stream replay
+├── src/
+│   └── fraud/
+│       ├── data/                                       # data generation, cleaning and splitting
+│       ├── evaluation/                                 # metrics, cost functions and threshold selection
+│       ├── features/                                   # feature functions based on past transactions only
+│       ├── models/                                     # shared training function
+│       └── monitoring/                                 # drift detection and retraining triggers
+├── tests/                                              # API consistency test on a reference set and unit tests
+├── .gitignore                                          # files excluded from version control
+├── README.md                                           # project overview and repository structure
+└── requirements.txt                                    # Python dependencies
 ```
+
+Empty directories contain a `.gitkeep` file so that they are kept in version control.
 
 ## Conventions
 
