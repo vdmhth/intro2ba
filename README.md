@@ -79,6 +79,8 @@ pip install -r requirements.txt
 
 Download the [Online Payments Fraud Detection Dataset](https://www.kaggle.com/datasets/rupakroy/online-payments-fraud-detection-dataset) and place `kaggle dataset.zip`, or the extracted `PS_20174392719_1491204439457_log.csv`, in `data/raw/`.
 
+Alternatively, you can skip the synthetic data generation step and download the [synthesized dataset here.](https://drive.google.com/file/d/1p4JeMKKXDRkuhWAEYI8U0cZw7iMURaL-/view?usp=sharing)
+
 Notebooks can be executed from the command line:
 
 ```bash
